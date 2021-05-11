@@ -17,7 +17,7 @@ class ListaFormRequestUpdate extends FormRequest
      */
     public function authorize()
     {
-        if (Lista::find($this->route('lista'))) {
+        if (is_numeric($this->route('lista')) && Lista::find($this->route('lista'))) {
             return true;
         }
         return false;
