@@ -17,7 +17,7 @@ name database : todolist
 ```
 
 
-### edit .env file
+### edit .env file 
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.12
@@ -32,14 +32,14 @@ DB_PASSWORD=
 php artisan migrate
 ```
 
-### Run
-```
-php artisan serve
-```
-
 ### go to you DB in table usuarios and add one user
 ```
 INSERT INTO public.usuarios( nm_usuario) VALUES ( 'User test');
+```
+
+### Run
+```
+php artisan serve
 ```
 
 ## How it works
