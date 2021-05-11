@@ -32,9 +32,9 @@ DB_PASSWORD=
 php artisan migrate
 ```
 
-### go to you DB in table usuarios and add one user
+### ADD users to Seed 
 ```
-INSERT INTO public.usuarios( nm_usuario) VALUES ( 'User test');
+php artisan db:seed --class=DatabaseSeeder
 ```
 
 ### Run
