@@ -10,7 +10,10 @@ frontend.
 ```
 composer install
 ```
-
+### Run
+```
+php artisan serve
+```
 
 
 ## How it works
