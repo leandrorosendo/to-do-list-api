@@ -3,8 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Lista;
-use Illuminate\Http\Request;
 
 class ListaFormRequestCreate extends FormRequest
 {
@@ -17,7 +15,6 @@ class ListaFormRequestCreate extends FormRequest
      */
     public function authorize()
     {
-    
         return true;
     }
 
@@ -34,5 +31,5 @@ class ListaFormRequestCreate extends FormRequest
             'fl_realizado' => 'required|boolean'
         ];
     }
-    
+
 }

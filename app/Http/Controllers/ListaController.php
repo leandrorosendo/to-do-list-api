@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Services\ListaService;
 use App\Http\Requests\ListaFormRequest;
 use App\Http\Requests\ListaFormRequestCreate;
 use App\Http\Requests\ListaFormRequestUpdate;
-use App\Models\Lista;
+
 
 class ListaController extends Controller
 {
@@ -41,7 +40,7 @@ class ListaController extends Controller
      */
     public function store(ListaFormRequestCreate $request)
     {
-        return  $this->service->save($request->all());
+        return  $this->service->save($request->validated());
     }
 
     /**
@@ -53,7 +52,7 @@ class ListaController extends Controller
      */
     public function update(ListaFormRequestUpdate $request,  $id)
     {
-        return  $this->service->update($request, $id);
+        return  $this->service->update($request->validated(), $id);
     }
 
     /**
