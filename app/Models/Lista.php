@@ -18,7 +18,7 @@ class Lista extends Model
      */
     public function usuario()
     {
-        return $this->belongsTo(usuario::class);
+        return $this->belongsTo(usuario::class,'usuario_id');
     }
 
 

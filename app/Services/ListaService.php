@@ -26,9 +26,9 @@ class ListaService
     public function update($request, $id)
     {
       $lista = Lista::find($id);
-      $lista->fl_realizado = $request->get('fl_realizado');
-      $lista->usuario_id = $request->get('usuario_id');
-      $lista->ds_lista = $request->get('ds_lista');
+      $lista->fl_realizado = $request['fl_realizado'];
+      $lista->usuario_id = $request['usuario_id'];
+      $lista->ds_lista = $request['ds_lista'];
       return $lista->save();
       // return $lista->refresh();
     }
@@ -50,7 +50,7 @@ class ListaService
      */
     public function get():Collection
     {
-      return  Lista::orderBy('id')->get();
+      return  Lista::with('usuario')->orderBy('id')->get();
     }
 
     /**
